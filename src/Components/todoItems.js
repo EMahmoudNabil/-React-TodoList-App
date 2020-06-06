@@ -5,16 +5,21 @@ import '../App.css';
 
  const TodoItems = (props)=> {
    const {items,deletItem} = props;
-   const ListItems = items.map((item)=>{
-      return(
-        <div key={item.id}>
-          <span>{item.name}</span>
-          <span>{item.age}</span>
-          <span onClick={()=> deletItem(item.id)}>&times;</span>
+   let length =items.length;
 
-        </div>
-      )
-   })
+   const ListItems = length ?
+      items.map((item)=>{
+        return(
+          <div key={item.id}>
+            <span>{item.name}</span>
+            <span>{item.age}</span>
+            <span onClick={()=> deletItem(item.id)}>&times;</span>
+
+          </div>
+        )
+    }) :(
+        <p> There is no Items to Show </p>
+        )
     return(
         <div className="ListItem">
         <div>
