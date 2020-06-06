@@ -24,11 +24,19 @@ class App extends Component{
    })
     this.setState({items})
   }
+
+  addItem =(item)=>{
+    item.id =Math.random();
+    let items = this.state.items;
+    items.push(item);
+    this.setState({items})
+
+  }
   render(){
     return(
      <div>
      <TodoItems  items={this.state.items} deletItem={this.deleteItem}/>
-     <AddItems />
+     <AddItems addItem={this.addItem} />
      </div>
       
 
