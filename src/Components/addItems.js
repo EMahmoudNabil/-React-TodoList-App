@@ -35,7 +35,7 @@ import '../App.css';
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" id="name" placeholder="enter your name" onChange={this.handleChange}  value={this.state.name}/>
+                    <input type="text" id="name" placeholder="enter your name" onChange={this.handleChange}  value={this.state.name} />
                     <input type="number" id="age" placeholder="enter your age" onChange={this.handleChange} value={this.state.age} />
                     <input type="submit" value="add" />
 

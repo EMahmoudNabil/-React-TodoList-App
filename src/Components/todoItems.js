@@ -11,9 +11,9 @@ import '../App.css';
       items.map((item)=>{
         return(
           <div key={item.id}>
-            <span>{item.name}</span>
-            <span>{item.age}</span>
-            <span onClick={()=> deletItem(item.id)}>&times;</span>
+            <span className="name">{item.name}</span>
+            <span className="age">{item.age}</span>
+            <span  className="icon action" onClick={()=> deletItem(item.id)}>&times;</span>
 
           </div>
         )
@@ -22,11 +22,11 @@ import '../App.css';
         )
     return(
         <div className="ListItem">
-        <div>
-          <span>Name</span>
-          <span>Age</span>
-          <span>Action</span>
-        </div>
+          <div>
+            <span className="title name" >Name</span>
+            <span className="title age" >Age</span>
+            <span   className="title action" >Action</span>
+          </div>
         {ListItems}
         </div>
   
